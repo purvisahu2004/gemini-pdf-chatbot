@@ -18,7 +18,7 @@ if uploaded_file and api_key:
     st.success("✅ PDF uploaded successfully!")
     
     # Load Gemini model
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.5-flash-lite")
 
     # Convert uploaded file to Gemini-compatible object
     pdf_data = {
@@ -42,3 +42,4 @@ if uploaded_file and api_key:
             st.write(response.text)
 else:
     st.info("Please upload a PDF and enter your API key to begin.")
+
